@@ -35,3 +35,143 @@ CSS file.
 // Import your print styles
 @import "print";
 
+
+// GENERAL
+h1, h2, h3, h4, h5, h6, p, abbr, label {
+  color: inherit;
+}
+abbr, label {
+  opacity: 0.8;
+}
+
+$anchor-visited-font-color: $purple;
+$anchor-visited-font-color-hover: scale-color($anchor-visited-font-color, $lightness: -30%);
+a:visited {
+  color: $anchor-visited-font-color;
+  
+  &:hover {
+    color: $anchor-visited-font-color-hover;
+  }
+}
+
+blockquote, pre {
+  background-color: $smoke;
+}
+blockquote {
+  color: inherit;
+  border-left-width: rem-calc(3);
+  padding-bottom: 0.2rem;
+  p {
+    color: inherit;
+  }
+  cite {
+    color: inherit;
+    font-size: inherit;
+    display: inline;
+    
+    &:before {
+      content: '';
+    }
+  } // cite
+}
+
+pre code {
+  background: transparent;
+  border: none;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.small {
+  font-size: smaller;
+}
+
+.bordered {
+  border: solid rem-calc(2) $gainsboro;
+}
+// END GENERAL
+
+
+// HEADER
+#siteTitle a {
+  width: auto;
+}
+// END HEADER
+
+
+// CONTENT
+#content {
+  background-color: $tuatara;
+  
+  #inner-content {
+    padding: 0;
+  }
+}
+
+// SIDEBAR
+.sidebar {
+  //height: 100vh;
+  background-color: $off-canvas-bg;
+  color: $white;
+  
+  a:link {
+    color: scale-color($anchor-font-color, $lightness: +10%);
+    
+    &:hover {
+      color: scale-color($anchor-font-color-hover, $lightness: +10%);
+    }
+  }
+  
+  a:visited {
+    color: scale-color($anchor-visited-font-color, $lightness: +20%);
+    
+    &:hover {
+      color: scale-color($anchor-visited-font-color-hover, $lightness: +20%);
+    }
+  }
+  
+  .search-field, .search-submit {
+    display: inline-block;
+    vertical-align: bottom;
+    width: auto;
+    margin-bottom: rem-calc(8);
+  }
+  .search-field {
+    margin-right: rem-calc(4);
+  }
+  .search-submit {
+    padding: rem-calc(8);
+  }
+}
+// END SIDEBAR
+
+// MAIN
+main {
+  background-color: $smoke;
+  
+  &.columns {
+    padding: 0;
+  }
+  > header, article {
+    background-color: $white;
+    padding: 0 $column-gutter 1px;
+  }
+  article:nth-of-type(even) {
+    background-color: $snow;
+  }
+}
+// END MAIN
+// END CONTENT
+
+
+// FOOTER
+#mainFooter {
+  background-color: $jet;
+  color: white;
+  margin-top: 0;
+}
+// END FOOTER

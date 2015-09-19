@@ -1,4 +1,4 @@
-          <footer class="footer" role="contentinfo">
+          <footer id="mainFooter" class="footer" role="contentinfo">
             <div id="inner-footer" class="row">
               <div class="large-12 medium-12 columns">
                 <nav role="navigation">

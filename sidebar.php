@@ -1,4 +1,4 @@
-<div id="sidebar1" class="hide-for-small sidebar columns medium-4 medium-push-8 large-3 large-push-9" role="complementary">
+<div id="sidebar-full" class="hide-for-small sidebar columns medium-4 medium-push-8 large-3 large-push-9" role="complementary">
   <?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
     <?php dynamic_sidebar( 'sidebar1' ); ?>
   <?php else : ?>

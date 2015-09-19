@@ -26,9 +26,6 @@
 
     <?php wp_head(); ?>
 
-    <!-- Drop Google Analytics here -->
-    <!-- end analytics -->
-
   </head>
 
   <body <?php body_class(); ?>>
@@ -39,6 +36,6 @@
               
              <!-- This navs will be applied to the topbar, above all content 
                 To see additional nav styles, visit the /parts directory -->
-             <?php get_template_part( 'parts/nav', 'top-offcanvas' ); ?>
+             <?php get_template_part( 'parts/nav', 'top-offcanvas-sidebar' ); ?>
                    
           </header> <!-- end .header -->

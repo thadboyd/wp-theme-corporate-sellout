@@ -1,14 +1,14 @@
 <div class="panel hero">
   <div class="row">
     <div class="columns medium-4">
-      <div class="show-small-only">
+      <div class="show-for-small-only">
         <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
         <div class="tagline"><?php bloginfo('description') ?></div>
       </div>
       <img src="/img/strongbeer08.png" alt="Arizona Strong Beer Fest, 2008"/>
     </div>
     <div class="columns medium-8">
-      <div class="show-medium-up">
+      <div class="show-for-medium-up">
         <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
         <div class="tagline"><?php bloginfo('description') ?></div>
       </div>

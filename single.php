@@ -12,7 +12,7 @@
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
               <?php get_template_part( 'parts/loop', 'single' ); ?>
             <?php endwhile; else : ?>
-                <?php get_template_part( 'parts/content', 'missing' ); ?>
+              <?php get_template_part( 'parts/content', 'missing' ); ?>
             <?php endif; ?>
             <nav id="nav-below">
               <div class="nav-previous"><?php previous_post_link('%link', '<span class="meta-nav">&laquo;</span> %title') ?></div>

@@ -24,13 +24,10 @@
               <h2>By Month:</h2>
               <ul>
                 <?php wp_get_archives('type=monthly'); ?>
+                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                  <li><?php get_template_part( 'parts/loop', 'single-nohead' ); ?></li>
+                <?php endif; ?>
               </ul>
-
-              <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <?php get_template_part( 'parts/loop', 'single-nohead' ); ?>          
-              <?php endwhile; else : ?>
-                <?php get_template_part( 'parts/content', 'missing' ); ?>
-              <?php endif; ?>
             </div>
             
             <div class="columns medium-4">

@@ -35,6 +35,19 @@ CSS file.
 // Import your print styles
 @import "print";
 
+// MIXINS
+@mixin hr-before {
+  border-top: $hr-border-width $hr-border-style $hr-border-color;
+  margin-top: $hr-margin;
+  padding-top: $hr-margin;
+}
+@mixin hr-after {
+  border-bottom: $hr-border-width $hr-border-style $hr-border-color;
+  margin-bottom: $hr-margin;
+  padding-bottom: $hr-margin;
+}
+// END MIXINS
+
 
 // GENERAL
 h1, h2, h3, h4, h5, h6, p, abbr, label, caption, table caption {
@@ -134,6 +147,12 @@ pre code {
     margin-left: rem-calc(48);
     margin-bottom: 2rem;
   }
+  @media #{$small-only} {
+    img {
+      display: block;
+      margin: 0 auto rem-calc(12);
+    }
+  }
 }
 // END HERO
 
@@ -199,6 +218,10 @@ main {
     background-color: $white;
     padding: 0 $column-gutter 1px;
   }
+  article {
+    border-bottom: $hr-border-style 2px $hr-border-color;
+    padding-bottom: $hr-margin;
+  }
   article:nth-of-type(even) {
     background-color: $snow;
   }
@@ -206,10 +229,15 @@ main {
     padding: rem-calc(4) $column-gutter;
   }
 }
-.tags {
-  margin-bottom: 0;
+.article-footer {  
+  .tags {
+    margin-bottom: 0;
+    &:not(:empty) {
+      @include hr-before;
+    }
+  }
 }
-.comments-area {
+.comment-respond {
   border-top: $hr-border-width $hr-border-style $hr-border-color;
   margin-top: $hr-margin;
   padding-top: $hr-margin / 4;

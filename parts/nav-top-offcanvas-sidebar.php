@@ -7,12 +7,7 @@
     <ul class="title-area">
       <!-- Title Area -->
       <li class="name">
-        <?php
-        if ( is_front_page() && is_home() ) : ?>
-          <h1 id="siteTitle" class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-        <?php else : ?>
-          <span id="siteTitle" class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-        <?php endif; ?>
+        <span id="siteTitle" class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
       </li>
     </ul>    
     <section class="top-bar-section">

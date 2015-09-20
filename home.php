@@ -6,11 +6,7 @@
 
 <?php get_header(); ?>
   <div id="content">
-    <header class="panel hero">
-      <div class="row">
-        <?php get_template_part( 'parts', 'page' ); ?>
-      </div><!-- .row -->
-    </header>
+    <?php get_template_part( 'parts/content', 'hero' ); ?>
     <div id="inner-content" class="row">
       <?php get_sidebar(); ?>
       

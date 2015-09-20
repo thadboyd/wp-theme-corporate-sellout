@@ -1,4 +1,5 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">         
+<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+  <?php edit_post_link(__('Edit'), "<span class=\"edit-link\">\n", "</span>"); ?>
   <section class="entry-content" itemprop="articleBody">
     <?php the_post_thumbnail('full'); ?>
     <?php the_content(); ?>

@@ -112,6 +112,50 @@ pre code {
   }
 }
 
+// HERO
+$rotate-value: -2deg;
+$height-ratio: 2.2;
+
+.hero {
+  margin-bottom: 0;
+  
+  .site-title, .tagline {
+    position: relative;
+    
+    span {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .bg {
+      position: absolute;
+      left: rem-calc(-24);
+      transform: rotate($rotate-value);
+      border-radius: 50%;
+      height: 2rem;
+    }
+  }
+  
+  .site-title .bg {
+    z-index: 1;
+    width: 12em;
+    height: $h1-font-size * $height-ratio;
+    top: rem-calc(-18);
+    background-color: $primary-color;
+  }
+  .tagline {
+    font-size: $h3-font-size;
+    .bg {
+      z-index: 0;
+      width: 18em;
+      height: $h3-font-size * $height-ratio;
+      top: rem-calc(-5);
+      background-color: red;
+    }
+  }
+}
+// END HERO
+
 // SIDEBAR
 .sidebar {
   //height: 100vh;
@@ -136,6 +180,8 @@ pre code {
 }
 // END SIDEBAR
 
+
+// WIDGETS
 // SEARCH WIDGET
 .search-form {
   .search-field, .search-submit {
@@ -153,6 +199,14 @@ pre code {
 }
 // END SEARCH WIDGET
 
+// CALENDAR WIDGET
+#wp-calendar caption {
+  background-color: $black;
+  padding: rem-calc(4);
+}
+// END CALENDAR WIDGET
+// END WIDGETS
+
 // MAIN
 main {
   background-color: $smoke;
@@ -167,6 +221,17 @@ main {
   article:nth-of-type(even) {
     background-color: $snow;
   }
+  > nav {
+    padding: rem-calc(4) $column-gutter;
+  }
+}
+.tags {
+  margin-bottom: 0;
+}
+.comments-area {
+  border-top: $hr-border-width $hr-border-style $hr-border-color;
+  margin-top: $hr-margin;
+  padding-top: $hr-margin / 4;
 }
 // END MAIN
 // END CONTENT

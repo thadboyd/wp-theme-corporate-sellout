@@ -7190,6 +7190,35 @@ pre code {
   #content #inner-content {
     padding: 0; }
 
+.hero {
+  margin-bottom: 0; }
+  .hero .site-title, .hero .tagline {
+    position: relative; }
+    .hero .site-title span, .hero .tagline span {
+      position: relative;
+      z-index: 2; }
+    .hero .site-title .bg, .hero .tagline .bg {
+      position: absolute;
+      left: -1.5rem;
+      -webkit-transform: rotate(-2deg);
+      transform: rotate(-2deg);
+      border-radius: 50%;
+      height: 2rem; }
+  .hero .site-title .bg {
+    z-index: 1;
+    width: 12em;
+    height: 6.05rem;
+    top: -1.125rem;
+    background-color: #008CBA; }
+  .hero .tagline {
+    font-size: 1.6875rem; }
+    .hero .tagline .bg {
+      z-index: 0;
+      width: 18em;
+      height: 3.7125rem;
+      top: -0.3125rem;
+      background-color: red; }
+
 .sidebar {
   background-color: #333333;
   color: #FFFFFF; }
@@ -7214,6 +7243,10 @@ pre code {
 .search-form .search-submit {
   padding: 0.5rem; }
 
+#wp-calendar caption {
+  background-color: #000000;
+  padding: 0.25rem; }
+
 main {
   background-color: #EEEEEE; }
   main.columns {
@@ -7223,6 +7256,16 @@ main {
     padding: 0 1.875rem 1px; }
   main article:nth-of-type(even) {
     background-color: #F9F9F9; }
+  main > nav {
+    padding: 0.25rem 1.875rem; }
+
+.tags {
+  margin-bottom: 0; }
+
+.comments-area {
+  border-top: 1px solid #DDDDDD;
+  margin-top: 1.25rem;
+  padding-top: 0.3125rem; }
 
 #mainFooter {
   background-color: #222222;

@@ -113,45 +113,26 @@ pre code {
 }
 
 // HERO
-$rotate-value: -2deg;
-$height-ratio: 2.2;
-
 .hero {
   margin-bottom: 0;
   
   .site-title, .tagline {
-    position: relative;
-    
-    span {
-      position: relative;
-      z-index: 2;
-    }
-    
-    .bg {
-      position: absolute;
-      left: rem-calc(-24);
-      transform: rotate($rotate-value);
-      border-radius: 50%;
-      height: 2rem;
-    }
+    text-align: center;
   }
   
-  .site-title .bg {
-    z-index: 1;
-    width: 12em;
-    height: $h1-font-size * $height-ratio;
-    top: rem-calc(-18);
+  .site-title {
     background-color: $primary-color;
+    color: white;
+    padding: rem-calc(12) rem-calc(24);
+    margin-right: rem-calc(48);
+    margin-bottom: 0;
   }
   .tagline {
+    background-color: $info-color;
     font-size: $h3-font-size;
-    .bg {
-      z-index: 0;
-      width: 18em;
-      height: $h3-font-size * $height-ratio;
-      top: rem-calc(-5);
-      background-color: red;
-    }
+    padding: rem-calc(8) rem-calc(24);
+    margin-left: rem-calc(48);
+    margin-bottom: 2rem;
   }
 }
 // END HERO

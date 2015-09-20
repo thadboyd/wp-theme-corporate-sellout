@@ -7193,31 +7193,19 @@ pre code {
 .hero {
   margin-bottom: 0; }
   .hero .site-title, .hero .tagline {
-    position: relative; }
-    .hero .site-title span, .hero .tagline span {
-      position: relative;
-      z-index: 2; }
-    .hero .site-title .bg, .hero .tagline .bg {
-      position: absolute;
-      left: -1.5rem;
-      -webkit-transform: rotate(-2deg);
-      transform: rotate(-2deg);
-      border-radius: 50%;
-      height: 2rem; }
-  .hero .site-title .bg {
-    z-index: 1;
-    width: 12em;
-    height: 6.05rem;
-    top: -1.125rem;
-    background-color: #008CBA; }
+    text-align: center; }
+  .hero .site-title {
+    background-color: #008CBA;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    margin-right: 3rem;
+    margin-bottom: 0; }
   .hero .tagline {
-    font-size: 1.6875rem; }
-    .hero .tagline .bg {
-      z-index: 0;
-      width: 18em;
-      height: 3.7125rem;
-      top: -0.3125rem;
-      background-color: red; }
+    background-color: #a0d3e8;
+    font-size: 1.6875rem;
+    padding: 0.5rem 1.5rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem; }
 
 .sidebar {
   background-color: #333333;

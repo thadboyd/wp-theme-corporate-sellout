@@ -37,10 +37,10 @@ CSS file.
 
 
 // GENERAL
-h1, h2, h3, h4, h5, h6, p, abbr, label {
+h1, h2, h3, h4, h5, h6, p, abbr, label, caption, table caption {
   color: inherit;
 }
-abbr, label {
+abbr, label, caption {
   opacity: 0.8;
 }
 
@@ -133,7 +133,11 @@ pre code {
       color: scale-color($anchor-visited-font-color-hover, $lightness: +20%);
     }
   }
-  
+}
+// END SIDEBAR
+
+// SEARCH WIDGET
+.search-form {
   .search-field, .search-submit {
     display: inline-block;
     vertical-align: bottom;
@@ -147,7 +151,7 @@ pre code {
     padding: rem-calc(8);
   }
 }
-// END SIDEBAR
+// END SEARCH WIDGET
 
 // MAIN
 main {

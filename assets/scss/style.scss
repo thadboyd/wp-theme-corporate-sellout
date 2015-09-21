@@ -226,6 +226,10 @@ main {
   article {
     border-bottom: $hr-border-style 2px $hr-border-color;
     padding-bottom: $hr-margin;
+    
+    .entry-content section {
+      @include hr-before;
+    }
   }
   article:nth-of-type(even) {
     background-color: $snow;

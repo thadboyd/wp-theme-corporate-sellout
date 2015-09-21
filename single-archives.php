@@ -24,24 +24,26 @@
               <h2>By Month:</h2>
               <ul>
                 <?php wp_get_archives('type=monthly'); ?>
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                  <li><?php get_template_part( 'parts/loop', 'single-nohead' ); ?></li>
-                <?php endif; ?>
-              </ul>
-            </div>
+                <li>
+                  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                    <?php get_template_part( 'parts/loop', 'single-contentonly' ); ?>          
+                  <?php endwhile; endif; ?>
+                </li>
+              </ul>              
+            </div><!-- .columns -->
             
             <div class="columns medium-4">
               <h2>By Category:</h2>
               <ul>
-                <?php wp_list_categories("title_li="); ?>
+                <?php wp_list_categories('title_li='); ?>
               </ul>
-            </div>
+            </div><!-- .columns -->
             
             <div class="columns medium-4">
               <h2>By Tag:</h2>
-              <?php wp_tag_cloud(); ?>
-            </div>
-          </div>
+              <?php wp_tag_cloud('number=0'); ?>
+            </div><!-- .columns -->
+          </div><!-- .row -->
         </article>
       </main>
     </div> <!-- end #inner-content -->

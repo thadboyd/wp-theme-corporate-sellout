@@ -59,8 +59,13 @@ abbr, label, caption {
 
 $anchor-visited-font-color: $purple;
 $anchor-visited-font-color-hover: scale-color($anchor-visited-font-color, $lightness: -30%);
+a:not(:link) {
+  color: inherit;
+  cursor: inherit;
+}
 a:visited {
   color: $anchor-visited-font-color;
+  cursor: pointer;
   
   &:hover {
     color: $anchor-visited-font-color-hover;
@@ -244,6 +249,37 @@ main {
 }
 // END MAIN
 // END CONTENT
+
+
+// CONTACT FORM
+.recaptcha-container {
+  // Show a placeholder until the Captcha loads
+  position: relative;
+  width: 302px;
+  height: 76px;
+  background: $snow;
+  
+  .loading {
+    content: 'Loading...';
+    color: $steel;
+    position: absolute;
+    right: 40%;
+    top: 35%;
+    z-index: 1;
+  }
+  
+  iframe {
+    position: relative;
+    z-index: 2;
+  }
+}
+.wpcf7-form input[type="submit"] {
+  @media #{$large-up} {
+    display: block;
+    margin: rem-calc(6) 0;
+  }
+}
+// END CONTACT FORM
 
 
 // FOOTER

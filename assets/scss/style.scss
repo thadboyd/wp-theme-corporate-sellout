@@ -21,7 +21,43 @@ CSS file.
 @import "settings";
 
 // Import foundation.scss from Bower
-@import "../../bower_components/foundation/scss/foundation";
+// @import "../../bower_components/foundation/scss/foundation";
+@import
+  // "../../bower_components/foundation/scss/foundation/components/accordion",
+  // "../../bower_components/foundation/scss/foundation/components/alert-boxes",
+  "../../bower_components/foundation/scss/foundation/components/block-grid",
+  // "../../bower_components/foundation/scss/foundation/components/breadcrumbs",
+  // "../../bower_components/foundation/scss/foundation/components/button-groups",
+  "../../bower_components/foundation/scss/foundation/components/buttons",
+  // "../../bower_components/foundation/scss/foundation/components/clearing",
+  // "../../bower_components/foundation/scss/foundation/components/dropdown",
+  // "../../bower_components/foundation/scss/foundation/components/dropdown-buttons",
+  // "../../bower_components/foundation/scss/foundation/components/flex-video",
+  "../../bower_components/foundation/scss/foundation/components/forms",
+  // "../../bower_components/foundation/scss/foundation/components/grid",
+  // "../../bower_components/foundation/scss/foundation/components/inline-lists",
+  // "../../bower_components/foundation/scss/foundation/components/joyride",
+  // "../../bower_components/foundation/scss/foundation/components/keystrokes",
+  // "../../bower_components/foundation/scss/foundation/components/labels",
+  // "../../bower_components/foundation/scss/foundation/components/magellan",
+  // "../../bower_components/foundation/scss/foundation/components/orbit",
+  // "../../bower_components/foundation/scss/foundation/components/pagination",
+  "../../bower_components/foundation/scss/foundation/components/panels",
+  // "../../bower_components/foundation/scss/foundation/components/pricing-tables",
+  // "../../bower_components/foundation/scss/foundation/components/progress-bars",
+  // "../../bower_components/foundation/scss/foundation/components/reveal",
+  // "../../bower_components/foundation/scss/foundation/components/side-nav",
+  // "../../bower_components/foundation/scss/foundation/components/split-buttons",
+  // "../../bower_components/foundation/scss/foundation/components/sub-nav",
+  // "../../bower_components/foundation/scss/foundation/components/switches",
+  "../../bower_components/foundation/scss/foundation/components/tables",
+  // "../../bower_components/foundation/scss/foundation/components/tabs",
+  // "../../bower_components/foundation/scss/foundation/components/thumbs",
+  // "../../bower_components/foundation/scss/foundation/components/tooltips",
+  "../../bower_components/foundation/scss/foundation/components/top-bar",
+  "../../bower_components/foundation/scss/foundation/components/type",
+  "../../bower_components/foundation/scss/foundation/components/offcanvas",
+  "../../bower_components/foundation/scss/foundation/components/visibility";
 
 // Make gallery use Foundation block grid
 @import "gallery";
@@ -34,20 +70,6 @@ CSS file.
 
 // Import your print styles
 @import "print";
-
-// MIXINS
-@mixin hr-before {
-  border-top: $hr-border-width $hr-border-style $hr-border-color;
-  margin-top: $hr-margin;
-  padding-top: $hr-margin;
-}
-@mixin hr-after {
-  border-bottom: $hr-border-width $hr-border-style $hr-border-color;
-  margin-bottom: $hr-margin;
-  padding-bottom: $hr-margin;
-}
-// END MIXINS
-
 
 // GENERAL
 h1, h2, h3, h4, h5, h6, p, abbr, label, caption, table caption {
@@ -132,6 +154,9 @@ pre code {
 
 // HERO
 .hero {
+  border-width: 0 0 $hr-border-width;
+  border-color: $hr-border-color;
+  box-shadow: 0 0 rem-calc(6) $black;
   margin-bottom: 0;
   
   .site-title, .tagline {
@@ -219,20 +244,17 @@ main {
   &.columns {
     padding: 0;
   }
-  > header, article {
+  > header, article, .zebra > section {
     background-color: $white;
     padding: 0 $column-gutter 1px;
   }
-  article {
+  article, .zebra > section {
     border-bottom: $hr-border-style 2px $hr-border-color;
     padding-bottom: $hr-margin;
     
-    .entry-content section {
-      @include hr-before;
+    &:nth-of-type(even) {
+      background-color: $snow;
     }
-  }
-  article:nth-of-type(even) {
-    background-color: $snow;
   }
   > nav {
     padding: rem-calc(4) $column-gutter;

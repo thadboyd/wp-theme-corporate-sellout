@@ -8,7 +8,8 @@ CSS file.
 ******************************************************************/
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
-@import url("../../bower_components/font-awesome/scss/font-awesome");
+
+@import "../../bower_components/font-awesome/scss/font-awesome";
 
 // IMPORTING STYLES
 
@@ -316,3 +317,41 @@ main {
   margin-top: 0;
 }
 // END FOOTER
+
+
+// TABLESORTER
+table.tablesorter {
+  th {
+    background-color: #ccc;
+    cursor: pointer;
+    position: relative;
+    padding-right: 1.5em;
+    
+    &:after {
+        text-align: right;
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        font-style: normal;
+        content: '\f0dc';
+        position: absolute;
+        top: 0;
+        right: 0.5em;
+    } // th:after
+  } // th
+
+  .tablesorter-headerDesc, .tablesorter-headerAsc {
+    background-color: #8dbdd8;
+  }
+
+  .tablesorter-headerDesc:after {
+    content: '\f0dd';
+    bottom: 0.3em;
+    top: auto;
+  }
+  
+  .tablesorter-headerAsc:after {
+    content: '\f0de';
+    top: 0.3em;
+  }
+}
+// END TABLESORTER

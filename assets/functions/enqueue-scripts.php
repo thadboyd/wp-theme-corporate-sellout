@@ -13,6 +13,10 @@ function joints_scripts_and_styles() {
     // Modernizr from bower_components
     wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/bower_components/foundation/js/vendor/modernizr.js', array(), '2.8.3', true );
     
+    // tablesorter from bower_components, with parser-ignore-articles
+    wp_enqueue_script( 'tablesorter', get_template_directory_uri() . '/bower_components/jquery.tablesorter/dist/js/jquery.tablesorter.min.js', array(), '2.23.4', true );
+    wp_enqueue_script( 'tablesorter-parser-ignore-articles', get_template_directory_uri() . '/bower_components/jquery.tablesorter/dist/js/parsers/parser-ignore-articles.min.js', array(), '2.17.8', true );
+    
     // Adding Foundation scripts file in the footer
    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/min/foundation.min.js', array( 'jquery' ), '', true );
     

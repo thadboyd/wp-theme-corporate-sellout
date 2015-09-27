@@ -83,6 +83,9 @@ abbr, label, caption {
 
 $anchor-visited-font-color: $purple;
 $anchor-visited-font-color-hover: scale-color($anchor-visited-font-color, $lightness: -30%);
+a:link img:hover {
+  opacity: 0.8;
+}
 a:not(:link) {
   color: inherit;
   cursor: inherit;
@@ -322,7 +325,7 @@ main {
 // TABLESORTER
 table.tablesorter {
   th {
-    background-color: #ccc;
+    background-color: $gainsboro;
     cursor: pointer;
     position: relative;
     padding-right: 1.5em;
@@ -337,11 +340,11 @@ table.tablesorter {
         top: 0;
         right: 0.5em;
     } // th:after
+    
+    &.tablesorter-headerDesc, &.tablesorter-headerAsc {
+      background-color: #8dbdd8;
+    }
   } // th
-
-  .tablesorter-headerDesc, .tablesorter-headerAsc {
-    background-color: #8dbdd8;
-  }
 
   .tablesorter-headerDesc:after {
     content: '\f0dd';

@@ -67,7 +67,7 @@ CSS file.
 // Import your custom styles
 @import "main";
 
-// Import your retina/HD sty;es
+// Import your retina/HD styles
 @import "2x";
 
 // Import your print styles
@@ -83,6 +83,24 @@ abbr, label, caption {
 cite cite, em em {
   font-style: normal;
 }
+
+// Placeholder styles.  With browser prefixes, yay.
+$placeholder-color: $aluminum;
+::-webkit-input-placeholder {
+  color: $placeholder-color;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: $placeholder-color;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $placeholder-color;
+}
+:-ms-input-placeholder {
+  color: $placeholder-color;
+}
+
 
 $anchor-visited-font-color: $purple;
 $anchor-visited-font-color-hover: scale-color($anchor-visited-font-color, $lightness: -30%);

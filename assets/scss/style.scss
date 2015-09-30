@@ -43,7 +43,7 @@ CSS file.
   // "../../bower_components/foundation/scss/foundation/components/labels",
   // "../../bower_components/foundation/scss/foundation/components/magellan",
   // "../../bower_components/foundation/scss/foundation/components/orbit",
-  // "../../bower_components/foundation/scss/foundation/components/pagination",
+  "../../bower_components/foundation/scss/foundation/components/pagination",
   "../../bower_components/foundation/scss/foundation/components/panels",
   // "../../bower_components/foundation/scss/foundation/components/pricing-tables",
   // "../../bower_components/foundation/scss/foundation/components/progress-bars",
@@ -79,6 +79,9 @@ h1, h2, h3, h4, h5, h6, p, abbr, label, caption, table caption {
 }
 abbr, label, caption {
   opacity: 0.8;
+}
+cite cite, em em {
+  font-style: normal;
 }
 
 $anchor-visited-font-color: $purple;

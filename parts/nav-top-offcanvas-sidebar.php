@@ -1,4 +1,4 @@
-<div class="sticky show-for-medium-up">
+<div class="show-for-medium-up">
     
   <!-- If you want to use the more traditional "fixed" navigation.
    simply replace "sticky" with "fixed" -->

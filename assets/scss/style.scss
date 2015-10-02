@@ -83,6 +83,13 @@ abbr, label, caption {
 cite cite, em em {
   font-style: normal;
 }
+*[class*="block-grid"] figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+figcaption {
+  font-size: smaller;
+}
 
 // Placeholder styles.  With browser prefixes, yay.
 $placeholder-color: $aluminum;
@@ -286,6 +293,18 @@ main {
     padding: rem-calc(4) $column-gutter;
   }
 }
+
+.entry-content {
+  ul {
+    li {
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
 .article-footer {  
   .tags {
     margin-bottom: 0;

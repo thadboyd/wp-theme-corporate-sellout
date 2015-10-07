@@ -16,6 +16,8 @@
         <?php endwhile; else : ?>
           <?php get_template_part( 'parts/content', 'missing' ); ?>
         <?php endif; ?>
+        
+        <?php joints_page_navi(); ?>
       </main>
     </div> <!-- end #inner-content -->
   </div> <!-- end #content -->

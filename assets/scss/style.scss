@@ -37,7 +37,7 @@ CSS file.
   // "../../bower_components/foundation/scss/foundation/components/flex-video",
   "../../bower_components/foundation/scss/foundation/components/forms",
   // "../../bower_components/foundation/scss/foundation/components/grid",
-  // "../../bower_components/foundation/scss/foundation/components/inline-lists",
+  "../../bower_components/foundation/scss/foundation/components/inline-lists",
   // "../../bower_components/foundation/scss/foundation/components/joyride",
   // "../../bower_components/foundation/scss/foundation/components/keystrokes",
   // "../../bower_components/foundation/scss/foundation/components/labels",
@@ -166,6 +166,22 @@ pre code {
 .bordered {
   border: solid rem-calc(2) $gainsboro;
 }
+
+.inline-block-list {
+  @include inline-list;
+  
+  > li {
+    float: none;
+    display: inline-block;
+  }
+  
+  &.bottom > li {
+    vertical-align: bottom;
+  }
+  &.middle > li {
+    vertical-align: middle;
+  }
+}
 // END GENERAL
 
 
@@ -191,6 +207,15 @@ pre code {
   border-color: $hr-border-color;
   box-shadow: 0 0 rem-calc(6) $black;
   margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  
+  .column, .columns {
+    @media #{$medium-up} {
+      padding-left: $column-gutter;
+      padding-right: $column-gutter;
+    }
+  }
   
   .site-title, .tagline {
     text-align: center;
@@ -279,7 +304,13 @@ main {
   }
   > header, article, .zebra > section {
     background-color: $white;
-    padding: 0 $column-gutter 1px;
+    
+    @media #{$small-only} {
+      padding: 0 $column-gutter / 2 rem-calc(1);
+    }
+    @media #{$medium-up} {
+      padding: 0 $column-gutter rem-calc(1);
+    }
   }
   article, .zebra > section {
     border-bottom: $hr-border-style 2px $hr-border-color;

@@ -114,3 +114,12 @@ really slow down your CSS. Don't overdo it.
   margin-bottom: $hr-margin;
   padding-bottom: $hr-margin;
 }
+
+@mixin containerSize($child-width, $parent-width) {
+  width: $child-width / $parent-width * 100%;
+  max-width: $child-width * 1px;
+}
+
+@mixin handblogSize($child-width) {
+  @include containerSize($child-width, 960);
+}

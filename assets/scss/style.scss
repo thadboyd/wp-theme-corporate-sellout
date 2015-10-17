@@ -53,7 +53,7 @@ CSS file.
   // "../../bower_components/foundation/scss/foundation/components/sub-nav",
   // "../../bower_components/foundation/scss/foundation/components/switches",
   "../../bower_components/foundation/scss/foundation/components/tables",
-  // "../../bower_components/foundation/scss/foundation/components/tabs",
+  "../../bower_components/foundation/scss/foundation/components/tabs",
   // "../../bower_components/foundation/scss/foundation/components/thumbs",
   // "../../bower_components/foundation/scss/foundation/components/tooltips",
   "../../bower_components/foundation/scss/foundation/components/top-bar",
@@ -173,6 +173,7 @@ pre code {
   > li {
     float: none;
     display: inline-block;
+    margin: 0 rem-calc(4) rem-calc(8);
   }
   
   &.bottom > li {
@@ -329,6 +330,7 @@ main {
   ul {
     li {
       margin-bottom: 0.5rem;
+      max-width: 100%;
     }
     ul {
       margin-top: 0.5rem;
@@ -393,6 +395,19 @@ main {
 // END FOOTER
 
 
+// TABS
+.tabs {
+  .active {
+    a {
+      box-shadow: 0 0 rem-calc(1) $aluminum;
+      margin-left: rem-calc(2);
+      margin-right: rem-calc(2);
+    }
+  }
+}
+// END TABS
+
+
 // TABLESORTER
 table.tablesorter {
   th {
@@ -429,3 +444,132 @@ table.tablesorter {
   }
 }
 // END TABLESORTER
+
+
+// HANDWRITTEN BLOG POST
+#handblog-container {
+  width: inherit;
+  
+  @media #{$small-only} {
+    margin-left: -$column-gutter / 2;
+    margin-right: -$column-gutter / 2;
+  }
+  
+  @media #{$medium-up} {
+    margin-left: -$column-gutter;
+    margin-right: -$column-gutter;
+  }
+  
+  #typed {
+    @media #{$small-only} {
+      padding-left: $column-gutter / 2;
+      padding-right: $column-gutter / 2;
+    }
+    
+    @media #{$medium-up} {
+      padding-left: $column-gutter;
+      padding-right: $column-gutter;
+    }
+  }
+  
+  #handblog {
+    // for browsers with text-only zoom
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+  
+    p, blockquote {
+      margin: 0;
+      padding: 0;
+    }
+    blockquote {
+      border: 0;
+      background-color: inherit;
+    }
+    
+    a:link:hover {
+      // Opacity trick for links that contain multiple images
+      opacity: 0.8;
+      
+      img:hover {
+        opacity: 1.0;
+      }
+    }
+    
+    .page {
+      border: solid rem-calc(1) $smoke;
+      margin-bottom: 1rem;
+      
+      @media #{$small-only} {
+        // 1px border not visible on bottom of pages in Chrome on my Nexus 5
+        border-bottom-width: rem-calc(2);
+      }
+    }
+    
+    #p1p1l3s1 {
+      @include handblogSize(701);
+    }
+    #p1p1l3s2-neil {
+      @include handblogSize(93);
+    }
+    #p1p1l3s3 {
+      @include handblogSize(166);
+      float: right;
+    }
+    #p1p1l4s1 {
+      @include handblogSize(125);
+      float: left;
+    }
+    #p1p1l4s2-gaiman {
+      @include handblogSize(143);
+    }
+    #p1p1l4s3 {
+      @include handblogSize(284);
+    }
+    #p1p1l4s4-susancooper {
+      @include handblogSize(236);
+    }
+    #p1p1l4s5 {
+      @include handblogSize(172);
+    }
+    #p3p7l2s1 {
+      @include handblogSize(481);
+    }
+    #p3p7l2s2-randallmunroe {
+      @include handblogSize(262);
+    }
+    #p3p7l2s3 {
+      @include handblogSize(217);
+    }
+    #p5p2l5s1 {
+      @include handblogSize(596);
+    }
+    #p5p2l5s2-scientificamerican {
+      @include handblogSize(238);
+    }
+    #p5p2l5s3 {
+      @include handblogSize(126);
+    }
+    #p6p2l3s1 {
+      @include handblogSize(581);
+    }
+    #p6p2l3s2-comicbooks {
+      @include handblogSize(236);
+    }
+    #p6p2l3s3 {
+      @include handblogSize(143);
+      float: right;
+    }
+    #p6p2l4s1 {
+      @include handblogSize(124);
+      float: left;
+    }
+    #p6p2l4s2 {
+      @include handblogSize(465);
+    }
+    #p6p2l4s3 {
+      @include handblogSize(371);
+    }
+  } // handblog
+}
+// END HANDWRITTEN BLOG POST

@@ -355,6 +355,37 @@ main {
 // END CONTENT
 
 
+// EBOOKS
+.paypal-donate {
+  margin-bottom: 1.5rem;
+}
+
+.ebook {
+  header, section {
+    $gap: rem-calc(64);
+    padding-bottom: $gap;
+    border-bottom: solid rem-calc(1) $gainsboro;
+    margin-bottom: $gap;
+    
+    *:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+    
+    *:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  
+  section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+// END EBOOKS
+
+
 // CONTACT FORM
 .recaptcha-container {
   // Show a placeholder until the Captcha loads
